@@ -1,8 +1,12 @@
 body{
-    background: linear-gradient(110deg, rgb(18, 18, 69) 60%, rgb(30, 134, 61) 60%);
+    margin: 0px;
+    padding: 0px;
+    background: url(Violet_Evergarden_Vaioretto_Evag_3840x2160.jpg);
     color: white;
-    width: 100vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-position:top;
+    background-size: 500%;
 }
 
 img{
