@@ -11,7 +11,7 @@ setInterval(() => {
     body.style.backgroundSize = "500%"
     body.style.backgroundPosition = ''
     body.style.transition = '0.5s'
-    if(i==39){
+    if(i==38){
         i = 0;
     }
 }, 5000);
