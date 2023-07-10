@@ -14,7 +14,6 @@ for (let i = 0; i < 39; i++) {
   images.push(image);
 }
 
-
 function changeBackground() {
   body.style.background = `url('${images[currentIndex].src}')`;
   body.style.backgroundSize = '500%';
@@ -32,11 +31,14 @@ let preloadingIndex = 1;
 const preloadingInterval = setInterval(() => {
   const image = new Image();
   image.src = `/images/${preloadingIndex}.jpg`;
-  images.push(image);
 
-  preloadingIndex++;
-  if (preloadingIndex === 39) {
-    clearInterval(preloadingInterval);
-    setInterval(changeBackground, 5000);
-  }
+  image.onload = () => {
+    images.push(image);
+
+    preloadingIndex++;
+    if (preloadingIndex === 39) {
+      clearInterval(preloadingInterval);
+      setInterval(changeBackground, 5000);
+    }
+  };
 }, 0);
