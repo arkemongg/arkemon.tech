@@ -7,7 +7,7 @@ body.style.transition = '0.5s'
 const images = [];
 let currentIndex = 0;
 
-// Preload the images
+
 for (let i = 0; i < 39; i++) {
   const image = new Image();
   image.src = `/images/${i}.jpg`;
@@ -23,10 +23,10 @@ function changeBackground() {
   currentIndex = (currentIndex + 1) % images.length;
 }
 
-// Call changeBackground once to display the first image instantly
+
 changeBackground();
 
-// Preload the remaining images before starting the interval
+
 let preloadingIndex = 1;
 const preloadingInterval = setInterval(() => {
   const image = new Image();
